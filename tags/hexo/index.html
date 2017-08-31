@@ -596,8 +596,7 @@
     
         <script type="text/javascript">
             var tags = [];
-            var categories = [];
-            var labels = (tags.concat(categories)).filter(function(element) {return element != null; });
+            var labels = tags.filter(function(element) {return element != null; });
 
             var gitment = new Gitment({
                 id: '',
