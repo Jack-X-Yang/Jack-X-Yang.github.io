@@ -701,11 +701,15 @@
     <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
     
         <script type="text/javascript">
+            var tags = [];
+            var categories = [];
+            var labels = (tags.concat(categories)).filter(function(element) {return element != null; });
+
             var gitment = new Gitment({
                 id: '',
                 owner: 'Jack-X-Yang',
                 repo: 'Jack-X-Yang.github.io',
-                labels: [].pop(),
+                labels: labels,
                 oauth: {
                     client_id: 'ebd03a00917593f435b6',
                     client_secret: 'f7b051ed0550ea90e63fe8348e6eaaaca8b05ac7',
