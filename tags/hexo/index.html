@@ -95,6 +95,7 @@
 
 
 
+<meta name="keywords" content="Hexo, NexT, &gt;&gt;|&lt; &gt;||的笔记本, 个人博客">
 <meta property="og:type" content="website">
 <meta property="og:title" content="&gt;&gt;|&lt; &gt;| | 的笔记本">
 <meta property="og:url" content="http://yoursite.com/tags/hexo/index.html">
@@ -594,15 +595,19 @@
     <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
     
         <script type="text/javascript">
-            var gitment = new Gitment({
-                id: document.location.href,
-                owner: 'Jack-X-Yang',
-                repo: 'Jack-X-Yang.github.io',
-                oauth: {
-                    client_id: 'ebd03a00917593f435b6',
-                    client_secret: 'f7b051ed0550ea90e63fe8348e6eaaaca8b05ac7',
-                }});
-            gitment.render('gitment-container');
+            function ShowGitment(){
+                document.getElementById("gitment-display-button").style.display = "none";
+                document.getElementById("gitment-container").style.display = "block";
+                var gitment = new Gitment({
+                    id: document.location.href,
+                    owner: 'Jack-X-Yang',
+                    repo: 'Jack-X-Yang.github.io',
+                    oauth: {
+                        client_id: 'ebd03a00917593f435b6',
+                        client_secret: 'f7b051ed0550ea90e63fe8348e6eaaaca8b05ac7',
+                    }});
+                gitment.render('gitment-container');
+            }
         </script>
     
 
